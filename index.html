@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>snpick — World news, picked and explained</title>
+  <meta name="description" content="World news, picked and explained with context, sources and a clear point of view. Because knowing the news and understanding it are not the same thing.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Top Date & Newsletter Ticker Bar -->
+  <div class="top-ticker-bar">
+    <div class="container top-ticker-inner">
+      <div class="top-ticker-date" id="currentDateText">Saturday, September 26, 2026</div>
+      <div class="top-ticker-newsletter">
+        <span>The Morning Pick</span> — in your inbox at 7 AM · <strong>12,400+ readers</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="header-brand" aria-label="snpick homepage">
+        <svg viewBox="0 0 280 70" role="img" aria-hidden="true">
+          <circle cx="28" cy="38" r="14" fill="#F15A24" />
+          <text x="56" y="51" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="900" font-size="46" letter-spacing="-1.5px" fill="currentColor">sn<tspan fill="#F15A24">pick</tspan></text>
+        </svg>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="category.html" class="nav-link">World</a>
+        <a href="category.html" class="nav-link">Middle East</a>
+        <a href="category.html" class="nav-link">Asia</a>
+        <a href="category.html" class="nav-link">Economy</a>
+        <a href="category.html" class="nav-link">Climate</a>
+        <a href="category.html" class="nav-link">Opinion</a>
+      </nav>
+
+      <!-- Action Buttons (Search, Theme, Subscribe, Mobile Menu) -->
+      <div class="header-actions">
+        <button type="button" class="btn-icon search-open-btn" aria-label="Search stories" title="Search stories (Ctrl+K)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <button type="button" class="btn-icon theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#newsletterSection" class="btn-subscribe-header">Subscribe</a>
+
+        <button type="button" class="btn-icon mobile-menu-toggle" aria-label="Open navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark -->
+  <main id="mainContent">
+    <div class="container">
+      
+      <!-- "Today in 30 seconds" Ticker Box -->
+      <section class="today-summary-bar" aria-label="Today in 30 seconds news digest">
+        <div class="today-summary-badge">
+          <div class="today-summary-title">Today in 30 seconds</div>
+          <span class="today-summary-time">Updated 7:00 AM</span>
+        </div>
+        <ul class="today-summary-items">
+          <li>
+            <a href="article.html" class="today-item">
+              <span class="orange-dot"></span>
+              <span>UN climate finance draft draws objections from developing nations</span>
+            </a>
+          </li>
+          <li>
+            <a href="article.html" class="today-item">
+              <span class="orange-dot"></span>
+              <span>Red Sea shipping partly resumes; freight rates still double pre-crisis</span>
+            </a>
+          </li>
+          <li>
+            <a href="article.html" class="today-item">
+              <span class="orange-dot"></span>
+              <span>Europe's AI Act enters its first phase — here's what changes</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Leaderboard Ad Slot -->
+      <aside class="ad-slot-container" aria-label="Sponsor advertisement">
+        <span class="ad-label">Advertisement</span>
+        <div class="ad-slot-box ad-leaderboard">
+          <span class="ad-network">AdSense</span>
+          <span class="ad-dims">728×90 · 970×90 · responsive</span>
+        </div>
+      </aside>
+
+      <!-- Lead Story & Most Read Section Grid -->
+      <section class="lead-section-grid" aria-labelledby="leadStoryHeading">
+        
+        <!-- Left: Featured Lead Story Card -->
+        <article class="lead-story-card">
+          <a href="article.html" class="lead-story-figure">
+            <img src="assets/images/thumb-red-sea.svg" alt="Graphic depicting Red Sea shipping crisis and trade route disruption" width="800" height="450" loading="eager">
+          </a>
+          <div class="badge-category">
+            <span>ANALYSIS</span>
+            <span class="dot-separator">•</span>
+            <span>MIDDLE EAST</span>
+          </div>
+          <h1 id="leadStoryHeading">
+            <a href="article.html" class="story-lead-title">
+              Why a shipping crisis in the Red Sea ends up on your grocery bill
+            </a>
+          </h1>
+          <p class="story-lead-summary">
+            Longer routes mean higher freight and insurance — and consumers pay last. The whole supply chain, in one place.
+          </p>
+          <div class="story-meta-byline">
+            <span class="author-name">Mosharaf</span>
+            <span class="meta-sep">·</span>
+            <span>Sep 26</span>
+            <span class="meta-sep">·</span>
+            <span>8 min read</span>
+          </div>
+        </article>
+
+        <!-- Right: Most Read Sidebar & Rectangle Ad -->
+        <aside class="most-read-widget" aria-label="Most read stories">
+          <div class="section-title-wrap">
+            <span class="orange-dot"></span>
+            <h2 class="section-title">Most read</h2>
+          </div>
+
+          <ol class="most-read-list">
+            <li class="most-read-item">
+              <span class="most-read-num">1</span>
+              <div class="most-read-content">
+                <span class="most-read-category">ASIA</span>
+                <a href="article.html" class="most-read-title">The question nobody is asking in refugee repatriation talks</a>
+              </div>
+            </li>
+            <li class="most-read-item">
+              <span class="most-read-num">2</span>
+              <div class="most-read-content">
+                <span class="most-read-category">MIDDLE EAST</span>
+                <a href="article.html" class="most-read-title">Why a shipping crisis in the Red Sea ends up on your grocery bill</a>
+              </div>
+            </li>
+            <li class="most-read-item">
+              <span class="most-read-num">3</span>
+              <div class="most-read-content">
+                <span class="most-read-category">AFRICA</span>
+                <a href="article.html" class="most-read-title">Sudan's war: why the world's largest displacement isn't making headlines</a>
+              </div>
+            </li>
+            <li class="most-read-item">
+              <span class="most-read-num">4</span>
+              <div class="most-read-content">
+                <span class="most-read-category">WORLD</span>
+                <a href="article.html" class="most-read-title">Why Europe's AI rules will reach the apps on your phone</a>
+              </div>
+            </li>
+            <li class="most-read-item">
+              <span class="most-read-num">5</span>
+              <div class="most-read-content">
+                <span class="most-read-category">CLIMATE</span>
+                <a href="article.html" class="most-read-title">Climate finance: what was pledged vs. what actually arrived</a>
+              </div>
+            </li>
+          </ol>
+
+          <!-- Sidebar Medium Rectangle Ad -->
+          <div class="ad-slot-container" style="margin-top: 2rem;">
+            <span class="ad-label">Advertisement</span>
+            <div class="ad-slot-box ad-rectangle">
+              <span class="ad-network">AdSense</span>
+              <span class="ad-dims">300×250</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Latest Analysis Section -->
+      <section class="analysis-section" aria-labelledby="analysisHeading">
+        <div class="section-heading-bar">
+          <div class="section-title-wrap">
+            <span class="orange-dot"></span>
+            <h2 id="analysisHeading" class="section-title">Latest analysis</h2>
+          </div>
+          <a href="category.html" class="section-more-link">
+            <span>See all</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="cards-grid-3">
+          <!-- Card 1 -->
+          <article class="article-card">
+            <a href="article.html" class="card-media">
+              <img src="assets/images/thumb-climate.svg" alt="Climate finance graphic" width="600" height="380" loading="lazy">
+            </a>
+            <div class="badge-category card-category-badge">
+              <span>EXPLAINER</span>
+              <span class="dot-separator">•</span>
+              <span>CLIMATE</span>
+            </div>
+            <h3 class="card-title">
+              <a href="article.html">Climate finance: what was pledged vs. what actually arrived</a>
+            </h3>
+            <p class="card-excerpt">
+              Summits announce billions. How much reaches the ground? Three questions to cut through it.
+            </p>
+            <div class="card-meta-line">Sep 26 · 6 min read</div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="article-card">
+            <a href="article.html" class="card-media">
+              <img src="assets/images/thumb-economy.svg" alt="Global rate cuts graphic" width="600" height="380" loading="lazy">
+            </a>
+            <div class="badge-category card-category-badge">
+              <span>ANALYSIS</span>
+              <span class="dot-separator">•</span>
+              <span>ECONOMY</span>
+            </div>
+            <h3 class="card-title">
+              <a href="article.html">Global rate cuts: what they mean for remittances and emerging currencies</a>
+            </h3>
+            <p class="card-excerpt">
+              A weaker dollar has winners and losers. A simple guide for families who rely on money from abroad.
+            </p>
+            <div class="card-meta-line">Sep 26 · 7 min read</div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="article-card">
+            <a href="article.html" class="card-media">
+              <img src="assets/images/thumb-climate.svg" alt="European AI rules graphic" width="600" height="380" loading="lazy">
+            </a>
+            <div class="badge-category card-category-badge">
+              <span>EXPLAINER</span>
+              <span class="dot-separator">•</span>
+              <span>WORLD</span>
+            </div>
+            <h3 class="card-title">
+              <a href="article.html">Why Europe's AI rules will reach the apps on your phone</a>
+            </h3>
+            <p class="card-excerpt">
+              How regulation written in Brussels becomes a global standard, in five steps.
+            </p>
+            <div class="card-meta-line">Sep 26 · 9 min read</div>
+          </article>
+        </div>
+      </section>
+
+      <!-- "The Morning Pick" Newsletter Banner Box -->
+      <section id="newsletterSection" class="newsletter-banner" aria-labelledby="newsletterHeading">
+        <div class="newsletter-grid">
+          <div class="newsletter-info-col">
+            <div class="newsletter-subhead">
+              <span class="orange-dot"></span>
+              <span>THE MORNING PICK · FREE</span>
+            </div>
+            <h2 id="newsletterHeading" class="newsletter-headline">
+              Too much news. Too little time to understand it.
+            </h2>
+            <p class="newsletter-desc">
+              Every morning at 7: the five world stories that matter — what happened, why it matters, and what comes next. Done in five minutes.
+            </p>
+          </div>
+
+          <div class="newsletter-form-col">
+            <form class="newsletter-form" novalidate>
+              <div class="newsletter-input-group">
+                <label for="homeEmailInput" class="sr-only">Your email address</label>
+                <input type="email" id="homeEmailInput" class="newsletter-input" placeholder="Your email address" required autocomplete="email">
+                <button type="submit" class="btn-newsletter-submit">Subscribe free</button>
+              </div>
+            </form>
+            <div class="newsletter-perks">
+              <span>✓ No spam</span>
+              <span>✓ One-click unsubscribe</span>
+              <span>12,400+ readers</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Opinion Section Layout -->
+      <section class="opinion-section" aria-labelledby="opinionHeading">
+        <div class="section-heading-bar">
+          <div class="section-title-wrap">
+            <span class="orange-dot"></span>
+            <h2 id="opinionHeading" class="section-title">Opinion</h2>
+          </div>
+          <a href="category.html" class="section-more-link">
+            <span>All opinion</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="opinion-grid">
+          <!-- Left: 2 Horizontal Opinion Cards -->
+          <div class="opinion-cards-list">
+            <article class="opinion-card">
+              <a href="article.html" class="opinion-thumb">
+                <img src="assets/images/thumb-dark.svg" alt="Refugee repatriation illustration" width="600" height="380" loading="lazy">
+              </a>
+              <div class="opinion-content">
+                <div class="badge-category">
+                  <span class="badge-tag-pill">OPINION</span>
+                  <span class="dot-separator">•</span>
+                  <span>ASIA</span>
+                </div>
+                <h3 class="opinion-title">
+                  <a href="article.html">The question nobody is asking in refugee repatriation talks</a>
+                </h3>
+                <p class="opinion-summary">
+                  Without guarantees of safety and citizenship, return is a photo opportunity, not a policy.
+                </p>
+                <div class="card-meta-line">Sep 26 · 5 min read</div>
+              </div>
+            </article>
+
+            <article class="opinion-card">
+              <a href="article.html" class="opinion-thumb">
+                <img src="assets/images/thumb-dark.svg" alt="Sudan displacement illustration" width="600" height="380" loading="lazy">
+              </a>
+              <div class="opinion-content">
+                <div class="badge-category">
+                  <span>ANALYSIS</span>
+                  <span class="dot-separator">•</span>
+                  <span>AFRICA</span>
+                </div>
+                <h3 class="opinion-title">
+                  <a href="article.html">Sudan's war: why the world's largest displacement isn't making headlines</a>
+                </h3>
+                <p class="opinion-summary">
+                  How media attention gets rationed — and what that costs in human terms.
+                </p>
+                <div class="card-meta-line">Sep 26 · 6 min read</div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Right: Vertical Skyscraper Ad -->
+          <aside class="ad-slot-container" aria-label="Sponsor banner">
+            <span class="ad-label">Advertisement</span>
+            <div class="ad-slot-box ad-skyscraper">
+              <span class="ad-network">AdSense</span>
+              <span class="ad-dims">300×600</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <!-- Brand & Tagline Col -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand-logo" aria-label="snpick footer home">
+            <svg viewBox="0 0 280 70" role="img" aria-hidden="true">
+              <circle cx="28" cy="38" r="14" fill="#F15A24" />
+              <text x="56" y="51" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="900" font-size="46" letter-spacing="-1.5px" fill="currentColor">sn<tspan fill="#F15A24">pick</tspan></text>
+            </svg>
+          </a>
+          <p class="footer-tagline">
+            World news, picked and explained — with context, sources and a clear point of view. Because knowing the news and understanding it are not the same thing.
+          </p>
+          <div>
+            <a href="#newsletterSection" class="btn-primary-pill" style="font-size: 0.8rem; padding: 0.5rem 1.15rem;">Get The Morning Pick</a>
+          </div>
+        </div>
+
+        <!-- Col 1: Sections -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Sections</h4>
+          <ul class="footer-links-list">
+            <li><a href="category.html" class="footer-link">World</a></li>
+            <li><a href="category.html" class="footer-link">Middle East</a></li>
+            <li><a href="category.html" class="footer-link">Asia</a></li>
+            <li><a href="category.html" class="footer-link">Economy</a></li>
+            <li><a href="category.html" class="footer-link">Climate</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: snpick -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">snpick</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="about.html#editorial-policy" class="footer-link">Editorial policy</a></li>
+            <li><a href="about.html#corrections" class="footer-link">Corrections</a></li>
+            <li><a href="about.html#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Legal -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links-list">
+            <li><a href="#" class="footer-link">Privacy policy</a></li>
+            <li><a href="#" class="footer-link">Cookie settings</a></li>
+            <li><a href="#" class="footer-link">Terms of use</a></li>
+            <li><a href="#" class="footer-link">Advertise</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 snpick. All rights reserved.</div>
+        <div class="footer-social-links">
+          <a href="#" class="footer-social-link">Facebook</a>
+          <span>·</span>
+          <a href="#" class="footer-social-link">X</a>
+          <span>·</span>
+          <a href="#" class="footer-social-link">YouTube</a>
+          <span>·</span>
+          <a href="#" class="footer-social-link">RSS</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Off-Canvas Drawer -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation drawer">
+    <div class="mobile-drawer-header">
+      <div class="mobile-drawer-brand">
+        <svg viewBox="0 0 280 70" role="img" aria-hidden="true">
+          <circle cx="28" cy="38" r="14" fill="#F15A24" />
+          <text x="56" y="51" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="900" font-size="46" letter-spacing="-1.5px" fill="currentColor">sn<tspan fill="#F15A24">pick</tspan></text>
+        </svg>
+      </div>
+      <button type="button" class="btn-icon" id="closeDrawerBtn" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+      <li><a href="category.html" class="mobile-nav-link">World</a></li>
+      <li><a href="category.html" class="mobile-nav-link">Middle East</a></li>
+      <li><a href="category.html" class="mobile-nav-link">Asia</a></li>
+      <li><a href="category.html" class="mobile-nav-link">Economy</a></li>
+      <li><a href="category.html" class="mobile-nav-link">Climate</a></li>
+      <li><a href="category.html" class="mobile-nav-link">Opinion</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About & Mission</a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <button type="button" class="mobile-theme-btn theme-toggle-btn">
+        <span>Appearance</span>
+        <span class="mobile-theme-label">Dark Mode</span>
+      </button>
+      <a href="#newsletterSection" class="btn-primary-pill" style="text-align: center;">Get The Morning Pick</a>
+    </div>
+  </aside>
+
+  <!-- Live Search Dialog (Accessible <dialog closedby="any">) -->
+  <dialog id="searchModal" class="search-modal" closedby="any" aria-labelledby="searchModalLabel">
+    <div class="search-dialog-inner">
+      <div class="search-input-header">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <label for="searchModalInput" id="searchModalLabel" class="sr-only">Search all snpick stories</label>
+        <input type="search" id="searchModalInput" class="search-modal-input" placeholder="Search stories, topics, keywords..." autocomplete="off">
+        <button type="button" class="btn-close-modal" id="closeSearchBtn" aria-label="Close search">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="search-results-list" id="searchResultsList">
+        <!-- Rendered dynamically by search.js -->
+      </ul>
+
+      <div class="search-dialog-footer">
+        <span>Press <kbd class="kbd-shortcut">ESC</kbd> to close</span>
+        <span>Instant keyword search</span>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Floating Toast Notification Element -->
+  <div id="appToast" class="app-toast" role="status" aria-live="polite"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

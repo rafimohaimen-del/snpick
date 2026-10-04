@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-climate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFEBE3" />
+      <stop offset="100%" stop-color="#FCDFD4" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="380" fill="url(#bg-climate)" rx="12" />
+  <!-- Corner quarter circle -->
+  <path d="M 0 0 L 120 0 A 120 120 0 0 1 0 120 Z" fill="#F15A24" />
+</svg>

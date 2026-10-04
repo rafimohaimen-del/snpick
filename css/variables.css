@@ -1,0 +1,141 @@
+/* ==========================================================================
+   snpick Design Tokens & Theme Variables
+   Supports Light & Dark Modes with persistent user switching
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Brand Core Colors */
+  --brand-orange: #F15A24;
+  --brand-orange-hover: #D94614;
+  --brand-orange-subtle: #FFF0E8;
+  --brand-orange-tint: rgba(241, 90, 36, 0.12);
+
+  /* Light Theme (Default: Editorial Clean Paper) */
+  --bg-page: #FFFFFF;
+  --bg-surface: #FAFAF8;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-subtle: #F3F4F6;
+  --bg-newsletter: #FFF0E7;
+  --bg-ad: #F4F4F2;
+  
+  --text-primary: #121417;
+  --text-secondary: #4B5563;
+  --text-muted: #6B7280;
+  --text-faint: #9CA3AF;
+  
+  --border-light: #E5E7EB;
+  --border-subtle: #F0EFEA;
+  --border-strong: #121417;
+  --border-ad: #E0DFD8;
+
+  --accent-dot: #F15A24;
+  --code-bg: #F3F4F6;
+
+  /* Typography */
+  --font-editorial: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, Monaco, monospace;
+
+  /* Layout & Geometry */
+  --container-width: 1220px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-modal: 0 20px 40px -8px rgba(0, 0, 0, 0.24);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Browser Native Theme Hook */
+  color-scheme: light dark;
+}
+
+/* System Dark Mode Fallback */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-page: #0D0F12;
+    --bg-surface: #14171D;
+    --bg-surface-elevated: #1B1E26;
+    --bg-subtle: #212530;
+    --bg-newsletter: #241611;
+    --bg-ad: #181B22;
+
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+    --text-muted: #818896;
+    --text-faint: #5D6370;
+
+    --border-light: #262B36;
+    --border-subtle: #1C2028;
+    --border-strong: #E5E7EB;
+    --border-ad: #272C38;
+    
+    --brand-orange-subtle: #2B1812;
+    --brand-orange-tint: rgba(241, 90, 36, 0.22);
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.4);
+    --shadow-modal: 0 20px 45px -8px rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Explicit Dark Theme (User Toggle) */
+[data-theme="dark"] {
+  --bg-page: #0D0F12;
+  --bg-surface: #14171D;
+  --bg-surface-elevated: #1B1E26;
+  --bg-subtle: #212530;
+  --bg-newsletter: #241611;
+  --bg-ad: #181B22;
+
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --text-muted: #818896;
+  --text-faint: #5D6370;
+
+  --border-light: #262B36;
+  --border-subtle: #1C2028;
+  --border-strong: #E5E7EB;
+  --border-ad: #272C38;
+  
+  --brand-orange-subtle: #2B1812;
+  --brand-orange-tint: rgba(241, 90, 36, 0.22);
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.4);
+  --shadow-modal: 0 20px 45px -8px rgba(0, 0, 0, 0.7);
+}
+
+/* Explicit Light Theme (User Toggle) */
+[data-theme="light"] {
+  --bg-page: #FFFFFF;
+  --bg-surface: #FAFAF8;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-subtle: #F3F4F6;
+  --bg-newsletter: #FFF0E7;
+  --bg-ad: #F4F4F2;
+  
+  --text-primary: #121417;
+  --text-secondary: #4B5563;
+  --text-muted: #6B7280;
+  --text-faint: #9CA3AF;
+  
+  --border-light: #E5E7EB;
+  --border-subtle: #F0EFEA;
+  --border-strong: #121417;
+  --border-ad: #E0DFD8;
+
+  --brand-orange-subtle: #FFF0E8;
+  --brand-orange-tint: rgba(241, 90, 36, 0.12);
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-modal: 0 20px 40px -8px rgba(0, 0, 0, 0.24);
+}
