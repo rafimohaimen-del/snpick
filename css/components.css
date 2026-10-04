@@ -355,7 +355,7 @@
   display: grid;
   grid-template-columns: 24px 1fr;
   gap: 1rem;
-  align-items: baseline;
+  align-items: start;
 }
 
 .most-read-num {
@@ -377,6 +377,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--brand-orange);
+  line-height: 1.2;
 }
 
 .most-read-title {
