@@ -306,7 +306,8 @@
   background-color: var(--bg-subtle);
 }
 
-.lead-story-figure img, .lead-story-figure svg {
+.lead-story-figure img,
+.lead-story-figure svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -417,7 +418,8 @@
   margin-bottom: 1.15rem;
 }
 
-.card-media img, .card-media svg {
+.card-media img,
+.card-media svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -453,6 +455,7 @@
   margin-bottom: 0.85rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -612,7 +615,8 @@
   background-color: var(--bg-subtle);
 }
 
-.opinion-thumb img, .opinion-thumb svg {
+.opinion-thumb img,
+.opinion-thumb svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
