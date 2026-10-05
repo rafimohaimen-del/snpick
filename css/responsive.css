@@ -155,6 +155,10 @@
    Tablet Breakpoints (max-width: 860px)
    -------------------------------------------------------------------------- */
 @media (max-width: 860px) {
+  .article-reading-container {
+    margin-left: 0;
+  }
+
   .header-nav {
     display: none;
   }

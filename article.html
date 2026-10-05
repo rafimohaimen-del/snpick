@@ -82,7 +82,7 @@
   <!-- Main Article Content -->
   <main id="mainArticleContent">
     <div class="container">
-      <article class="article-reading-container">
+      <article class="article-reading-container" style="margin-left: 100px; margin-right: auto;">
         
         <!-- Breadcrumbs -->
         <nav class="article-breadcrumbs" aria-label="Breadcrumbs">
@@ -106,8 +106,11 @@
           Longer routes mean higher freight and insurance — and consumers pay last. The whole supply chain, in one place.
         </p>
 
+        <!-- Horizontal Line Above Author Bar -->
+        <hr class="article-author-hr" style="border: none; border-top: 2px solid #000000; margin: 0 0 1rem 0; width: 100%;">
+
         <!-- Author Byline & Article Utilities -->
-        <div class="article-author-bar">
+        <div class="article-author-bar" style="border-top: none; border-bottom: none;">
           <div class="author-profile-info">
             <div class="author-avatar" aria-hidden="true">M</div>
             <div class="author-text">
@@ -152,11 +155,11 @@
             <span>Key takeaways</span>
           </div>
           <ol class="takeaways-list">
-            <li class="takeaways-item">
+            <li class="takeaways-item" style="border-bottom: 1px solid lightgray; padding-bottom: 0.85rem;">
               <span class="takeaways-num">1</span>
               <span><strong>Rerouting around Africa adds 10–14 days to an Asia–Europe voyage.</strong></span>
             </li>
-            <li class="takeaways-item">
+            <li class="takeaways-item" style="border-bottom: 1px solid lightgray; padding-bottom: 0.85rem;">
               <span class="takeaways-num">2</span>
               <span><strong>Extra fuel, freight and war-risk insurance are paid by importers first, consumers last.</strong></span>
             </li>
@@ -216,18 +219,27 @@
         <!-- Sources Cited Box -->
         <section class="article-sources-box" aria-labelledby="sourcesBoxTitle">
           <h4 id="sourcesBoxTitle" class="sources-box-title">Sources</h4>
-          <ol class="sources-list">
-            <li>
-              International report on shipping disruption and route changes
-              <small>International organization · Published September 2026</small>
+          <ol class="sources-list" style="list-style: none; padding-left: 0;">
+            <li class="source-item" style="display: flex; align-items: flex-start; gap: 24px;">
+              <span class="source-num" style="color: var(--brand-orange); font-weight: 800; flex-shrink: 0;">1.</span>
+              <div class="source-content" style="flex: 1;">
+                International report on shipping disruption and route changes
+                <small style="display: block; font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">International organization · Published September 2026</small>
+              </div>
             </li>
-            <li>
-              Container freight rate index — weekly update
-              <small>Shipping data provider · Accessed September 25, 2026</small>
+            <li class="source-item" style="display: flex; align-items: flex-start; gap: 24px;">
+              <span class="source-num" style="color: var(--brand-orange); font-weight: 800; flex-shrink: 0;">2.</span>
+              <div class="source-content" style="flex: 1;">
+                Container freight rate index — weekly update
+                <small style="display: block; font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">Shipping data provider · Accessed September 25, 2026</small>
+              </div>
             </li>
-            <li>
-              Import payments and letters of credit, monthly data
-              <small>Central bank · Monthly report</small>
+            <li class="source-item" style="display: flex; align-items: flex-start; gap: 24px;">
+              <span class="source-num" style="color: var(--brand-orange); font-weight: 800; flex-shrink: 0;">3.</span>
+              <div class="source-content" style="flex: 1;">
+                Import payments and letters of credit, monthly data
+                <small style="display: block; font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">Central bank · Monthly report</small>
+              </div>
             </li>
           </ol>
         </section>
