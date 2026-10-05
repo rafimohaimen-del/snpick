@@ -666,7 +666,7 @@
    9. Article Reader Page Components (article.html)
    -------------------------------------------------------------------------- */
 .article-reading-container {
-  max-width: 820px;
+  max-width: 1078px;
   margin: 1.5rem auto 4rem 0;
   padding: 1.5rem 0 4rem 0;
 }
@@ -782,6 +782,7 @@
 
 .article-featured-media {
   width: 100%;
+  max-width: 1078px;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -803,13 +804,39 @@
   margin-bottom: 2.25rem;
 }
 
-/* Key Takeaways Callout Box */
+/* Key Takeaways Row & Google AdSense Ad Slot */
+.takeaways-ad-row {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  max-width: 1078px;
+}
+
 .takeaways-callout {
+  width: 678px;
+  max-width: 100%;
+  flex-shrink: 0;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   padding: 1.5rem 1.75rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0;
+}
+
+.takeaways-side-ad {
+  flex: 1;
+  min-width: 280px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.takeaways-side-ad .ad-slot-box {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
 }
 
 .takeaways-title {
