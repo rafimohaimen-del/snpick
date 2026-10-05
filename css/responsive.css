@@ -110,17 +110,35 @@
    Desktop & Tablet Breakpoints
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
+  .article-layout-grid,
   .takeaways-ad-row {
+    grid-template-columns: 1fr;
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .article-main-column {
+    width: 100%;
   }
 
   .takeaways-callout {
     width: 100%;
   }
 
+  .article-body-content {
+    width: 100%;
+  }
+
+  .article-side-ad,
   .takeaways-side-ad {
     width: 100%;
+    height: auto;
+  }
+
+  .article-side-ad .ad-slot-box,
+  .takeaways-side-ad .ad-slot-box {
+    min-height: 250px;
+    height: 250px;
   }
 
   .lead-section-grid {
