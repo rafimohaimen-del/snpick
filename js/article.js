@@ -18,7 +18,20 @@ document.addEventListener('DOMContentLoaded', () => {
     updateProgress();
   }
 
-  // 2. Share Article Button
+  // 2. Copy Link Button
+  const copyLinkBtn = document.getElementById('copyLinkBtn');
+  if (copyLinkBtn) {
+    copyLinkBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        showToast('Article link copied to clipboard!');
+      } catch (err) {
+        showToast('Article URL: ' + window.location.href);
+      }
+    });
+  }
+
+  // 3. Share Article Button
   const shareBtn = document.getElementById('shareArticleBtn');
   if (shareBtn) {
     shareBtn.addEventListener('click', async () => {
