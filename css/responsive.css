@@ -223,6 +223,15 @@
     gap: 1.75rem;
   }
 
+  .article-reading-container .newsletter-grid {
+    height: auto !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .article-reading-container .newsletter-grid > div:first-child {
+    width: 100% !important;
+  }
+
   .footer-top-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
