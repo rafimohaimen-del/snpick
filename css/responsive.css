@@ -131,14 +131,14 @@
 
   .article-side-ad,
   .takeaways-side-ad {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
   }
 
   .article-side-ad .ad-slot-box,
   .takeaways-side-ad .ad-slot-box {
     min-height: 250px;
-    height: 250px;
+    height: 250px !important;
   }
 
   .lead-section-grid {
