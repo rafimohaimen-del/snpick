@@ -7,9 +7,6 @@
 [![Responsive](https://img.shields.io/badge/Design-Fully%20Responsive-orange)](#responsive-design)
 [![Accessibility](https://img.shields.io/badge/A11y-WCAG%202.1%20AA-green)](#accessibility)
 
-> **Live Demo:** [https://rafimohaimen-del.github.io/snpick/](https://YOUR-GITHUB-USERNAME.github.io/snpick/)  
-> *(Replace `YOUR-GITHUB-USERNAME` with your GitHub handle after publishing to GitHub Pages)*
-
 ---
 
 ## 📖 Overview
