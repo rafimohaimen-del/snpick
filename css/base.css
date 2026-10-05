@@ -154,8 +154,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 0.85rem;
-  border-bottom: 1.5px solid var(--border-strong);
+  padding-top: 0.85rem;
+  border-top: 1.5px solid var(--border-strong);
   margin-bottom: 1.75rem;
 }
 
