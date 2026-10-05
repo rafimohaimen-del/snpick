@@ -4,8 +4,11 @@
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Responsive](https://img.shields.io/badge/Design-Fully%20Responsive-orange)](#responsive-design)
+[![Responsive](https://img.shields.io/badge/Design-Fully%20Responsive-orange)]git(#responsive-design)
 [![Accessibility](https://img.shields.io/badge/A11y-WCAG%202.1%20AA-green)](#accessibility)
+
+> **Live Demo:** [https://rafimohaimen-del.github.io/snpick/](https://rafimohaimen-del.github.io/snpick/)  
+> *(Replace `YOUR-GITHUB-USERNAME` with your GitHub handle after publishing to GitHub Pages)*
 
 ---
 
