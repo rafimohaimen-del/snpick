@@ -1038,6 +1038,13 @@
   border-radius: var(--radius-md);
   margin-bottom: 3.5rem;
   background-color: var(--bg-surface);
+  width: 678px;
+  max-width: 100%;
+}
+
+.article-reading-container .newsletter-banner {
+  width: 678px;
+  max-width: 100%;
 }
 
 .author-bio-avatar {

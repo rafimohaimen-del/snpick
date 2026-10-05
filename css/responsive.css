@@ -129,6 +129,14 @@
     width: 100%;
   }
 
+  .author-bio-card {
+    width: 100% !important;
+  }
+
+  .newsletter-banner {
+    width: 100% !important;
+  }
+
   .article-side-ad,
   .takeaways-side-ad {
     width: 100% !important;
