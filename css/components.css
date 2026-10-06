@@ -160,6 +160,10 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .today-summary-badge {
@@ -189,6 +193,9 @@
   list-style: none;
   overflow-x: auto;
   scrollbar-width: none;
+  min-width: 0;
+  max-width: 100%;
+  flex: 1;
 }
 
 .today-summary-items::-webkit-scrollbar {
@@ -219,6 +226,10 @@
   justify-content: center;
   margin: 1.5rem 0;
   text-align: center;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .ad-label {
@@ -243,6 +254,8 @@
   font-weight: 500;
   position: relative;
   overflow: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
   transition: opacity var(--transition-fast);
 }
 
@@ -812,7 +825,7 @@
 .article-layout-grid,
 .takeaways-ad-row {
   display: grid;
-  grid-template-columns: 678px 1fr;
+  grid-template-columns: minmax(0, 678px) minmax(0, 1fr);
   align-items: stretch;
   gap: 2rem;
   margin-bottom: 2.5rem;
@@ -821,15 +834,17 @@
 }
 
 .article-main-column {
-  width: 678px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 678px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
 }
 
 .takeaways-callout {
-  width: 678px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 678px;
+  min-width: 0;
   flex-shrink: 0;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-light);
@@ -841,7 +856,8 @@
 .article-side-ad,
 .takeaways-side-ad {
   flex: 1;
-  min-width: 280px;
+  min-width: 0;
+  max-width: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -893,8 +909,9 @@
 
 /* Rich Story Typography */
 .article-body-content {
-  width: 678px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 678px;
+  min-width: 0;
   font-size: 1.125rem;
   line-height: 1.75;
   color: var(--text-primary);
@@ -1041,17 +1058,19 @@
   border-radius: var(--radius-md);
   margin-bottom: 3.5rem;
   background-color: var(--bg-surface);
-  width: 678px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 678px;
+  min-width: 0;
 }
 
 .article-reading-container .newsletter-banner {
-  width: 678px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 678px;
+  min-width: 0;
 }
 
 .article-reading-container .newsletter-grid {
-  grid-template-columns: 290px 1fr;
+  grid-template-columns: minmax(0, 290px) minmax(0, 1fr);
   gap: 0.5rem;
 }
 
@@ -1249,8 +1268,10 @@
 .pagination-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 2rem;
+  max-width: 100%;
 }
 
 .page-num-btn {

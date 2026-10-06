@@ -14,6 +14,8 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -27,10 +29,17 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 main {
   flex: 1 0 auto;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 /* Accessibility: Skip Navigation Link */
@@ -117,8 +126,25 @@ a:hover {
   color: var(--brand-orange);
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+blockquote,
+figcaption {
+  overflow-wrap: break-word;
+}
+
 img,
-svg {
+svg,
+video,
+canvas,
+iframe {
   display: block;
   max-width: 100%;
   height: auto;

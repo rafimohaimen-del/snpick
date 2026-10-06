@@ -1,6 +1,17 @@
 /* ==========================================================================
    snpick Responsive Styles & Mobile Drawer
+   Eliminates all horizontal (X-axis) scroll across all viewports
    ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Global Horizontal Overflow Prevention
+   -------------------------------------------------------------------------- */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
 
 /* --------------------------------------------------------------------------
    Mobile Drawer Overlay & Menu
@@ -13,6 +24,7 @@
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
+  overflow-x: hidden;
   transition: opacity var(--transition-base);
 }
 
@@ -35,12 +47,18 @@
   flex-direction: column;
   padding: 1.5rem;
   transform: translateX(100%);
-  transition: transform var(--transition-base);
+  visibility: hidden;
+  pointer-events: none;
+  overflow-x: hidden;
   overflow-y: auto;
+  transition: transform var(--transition-base), visibility 0s ease var(--transition-base);
 }
 
 .mobile-drawer.active {
   transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform var(--transition-base), visibility 0s ease 0s;
 }
 
 .mobile-drawer-header {
@@ -107,39 +125,53 @@
 }
 
 /* --------------------------------------------------------------------------
-   Desktop & Tablet Breakpoints
+   Desktop & Tablet Breakpoints (max-width: 1024px)
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .article-layout-grid,
   .takeaways-ad-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     flex-direction: column;
     gap: 1.5rem;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .article-main-column {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 
   .takeaways-callout {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 
   .article-body-content {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 
   .author-bio-card {
     width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 
   .newsletter-banner {
     width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 
   .article-side-ad,
   .takeaways-side-ad {
     width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
     height: auto !important;
   }
 
@@ -147,6 +179,7 @@
   .takeaways-side-ad .ad-slot-box {
     min-height: 250px;
     height: 250px !important;
+    max-width: 100% !important;
   }
 
   .lead-section-grid {
@@ -196,6 +229,17 @@
 @media (max-width: 860px) {
   .article-reading-container {
     margin-left: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .top-ticker-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    gap: 0.25rem;
   }
 
   .header-nav {
@@ -208,28 +252,82 @@
     justify-content: center;
   }
 
+  .today-summary-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  .today-summary-badge {
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+    padding-right: 0;
+    padding-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  .today-summary-items {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    overflow-x: hidden;
+  }
+
+  .today-item {
+    white-space: normal;
+    word-break: break-word;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .filter-pills-bar {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    gap: 0.5rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .pagination-container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    max-width: 100%;
+  }
+
   .cards-grid-3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .work-steps-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    width: 100%;
+    max-width: 100%;
   }
 
-  .newsletter-grid {
-    grid-template-columns: 1fr;
-    gap: 1.75rem;
-  }
-
+  .newsletter-grid,
   .article-reading-container .newsletter-grid {
-    height: auto !important;
     grid-template-columns: 1fr !important;
+    gap: 1.75rem;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
+  .newsletter-grid > div:first-child,
   .article-reading-container .newsletter-grid > div:first-child {
     width: 100% !important;
+    max-width: 100% !important;
   }
 
   .footer-top-grid {
@@ -246,32 +344,71 @@
    Mobile Phone Breakpoints (max-width: 640px)
    -------------------------------------------------------------------------- */
 @media (max-width: 640px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .top-ticker-bar {
     display: none;
   }
 
   .cards-grid-3 {
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .opinion-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .opinion-card {
     grid-template-columns: 1fr;
     gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .opinion-thumb {
+    width: 100%;
+    max-width: 100%;
   }
 
   .feed-article-row {
     grid-template-columns: 1fr;
     gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .feed-article-thumb {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .feed-articles-list {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .author-bio-card {
     grid-template-columns: 1fr;
     text-align: left;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .footer-top-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .footer-brand-col {
@@ -284,26 +421,14 @@
     align-items: flex-start;
   }
 
-  .today-summary-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .today-summary-badge {
-    border-right: none;
-    border-bottom: 1px solid var(--border-light);
-    padding-right: 0;
-    padding-bottom: 0.5rem;
-    width: 100%;
-  }
-
   .btn-subscribe-header {
     display: none;
   }
 
   .newsletter-banner {
     padding: 2rem 1.25rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .newsletter-input-group {
@@ -311,6 +436,14 @@
     border-radius: 16px;
     padding: 0.85rem;
     gap: 0.75rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    min-width: 0;
   }
 
   .btn-newsletter-submit {
@@ -322,5 +455,30 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile Phone Breakpoints (max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .page-num-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .btn-next-page {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  .newsletter-banner {
+    padding: 1.5rem 1rem;
   }
 }
